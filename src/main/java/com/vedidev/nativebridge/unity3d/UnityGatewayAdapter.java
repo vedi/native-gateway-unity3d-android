@@ -20,6 +20,7 @@ public class UnityGatewayAdapter extends UnityPlayerActivity {
     public static String dispatch(String strParams) {
         if (!contextSet) {
             BunchManager.getInstance().setContext(UnityPlayer.currentActivity.getApplicationContext());
+            BunchManager.getInstance().setActivity(UnityPlayer.currentActivity);
             contextSet = true;
         }
 
